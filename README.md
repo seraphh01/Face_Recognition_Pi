@@ -1,5 +1,7 @@
 # Face Recognition Project - Android Things Individual Project by Serafim Socaciu
 
+## [Project Demo Video](https://youtu.be/rwF_JYZ4YAQ)
+
 ## Project Description:
 In this project, I have created a face recognition system using a Raspberry Pi, a camera module, and a LED. The system utilizes the Raspberry Pi's GPIO pins, LED bulb, and various software libraries such as OpenCV and face_recognition. The goal is to develop a system that can recognize faces captured by the camera and perform specific actions, such as lighting up an LED when a known face is detected.
 
