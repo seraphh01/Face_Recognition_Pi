@@ -6,24 +6,36 @@ In this project, I have created a face recognition system using a Raspberry Pi, 
 ## Schematics:
 ### The project involves the following components:
 Raspberry Pi 3 (Model B v1.2) [specification](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/)
+
 Raspberry Pi Camera Module or compatible USB webcam [specification](https://www.raspberrypi.com/products/camera-module-v2/)
+
 LED bulb
+
 Jumper wires
 
 ## Pre-requisites:
 ### Hardware components:
+
 Raspberry Pi 3 (Model B v1.2)
+
 Raspberry Pi Camera Module
+
 LED bulb
+
 Jumper wires
 
 ## Software components:
+
 Python programming language - [Python](https://www.python.org/)
+
 OpenCV library - [OpenCV](https://opencv.org/)
+
 face_recognition library - [face_recognition](https://github.com/ageitgey/face_recognition)
+
 RPi.GPIO library for Python - [RPi.GPIO](https://sourceforge.net/projects/raspberry-gpio-python/)
 
 ## Building Steps:
+
 ### Set up the Raspberry Pi and camera module:
 Install the Raspberry Pi OS on an SD card and insert it into the Raspberry Pi.
 Connect the camera module to the Raspberry Pi's camera connector (or connect a USB webcam).
