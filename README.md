@@ -5,38 +5,41 @@ In this project, I have created a face recognition system using a Raspberry Pi, 
 
 ## Schematics:
 ### The project involves the following components:
-Raspberry Pi 3 (Model B v1.2) specification 
-Raspberry Pi Camera Module or compatible USB webcam specification 
+Raspberry Pi 3 (Model B v1.2) [specification](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/)
+Raspberry Pi Camera Module or compatible USB webcam [specification](https://www.raspberrypi.com/products/camera-module-v2/)
 LED bulb
 Jumper wires
 
 ## Pre-requisites:
 ### Hardware components:
-Raspberry Pi 3 (Model B v1.2) - Specification
-Raspberry Pi Camera Module - Specification
+Raspberry Pi 3 (Model B v1.2)
+Raspberry Pi Camera Module
 LED bulb
 Jumper wires
 
 ## Software components:
-### Python programming language -Python
-OpenCV library -OpenCV
-face_recognition library -face_recognition
-RPi.GPIO library for Python -RPi.GPIO
+Python programming language - [Python](https://www.python.org/)
+OpenCV library - [OpenCV](https://opencv.org/)
+face_recognition library - [face_recognition](https://github.com/ageitgey/face_recognition)
+RPi.GPIO library for Python - [RPi.GPIO](https://sourceforge.net/projects/raspberry-gpio-python/)
 
 ## Building Steps:
 ### Set up the Raspberry Pi and camera module:
 Install the Raspberry Pi OS on an SD card and insert it into the Raspberry Pi.
 Connect the camera module to the Raspberry Pi's camera connector (or connect a USB webcam).
 Enable the camera interface in the Raspberry Pi Configuration settings (Preferences > Raspberry Pi Configuration > Interfaces > Camera).
-Wire the LED to the breadboard:
+### Wire the LED to the breadboard:
 Connect the positive (longer) leg of the LED to a GPIO pin on the Raspberry Pi (e.g., GPIO 18) using a jumper wire.
 Connect the other end of the resistor to a GND pin on the Raspberry Pi using another jumper wire.
 
 ## Running Steps:
+
 Ensure that all the hardware components are connected as per the schematics and all the software components are installed.
 Run the script using the provided train or test program arguments.
 To train the face recognition system, execute the script with the "train" argument. This step involves capturing and storing faces for future recognition.
 To test the face recognition system, execute the script with the "test" argument followed by either a filename or “camera” as to either test an already existing image or capture a new image using the camera. This step involves capturing faces, comparing them with the trained faces, and performing actions (e.g., lighting up the LED) based on recognition results.
-Most important function: we load the known faces obtained in the training faze and now we test the given frame’s encodings against the known faces encodings. I there is a match, then we output a high signal using GPIO library on the specified led pin, else, we output a low signal, meaning that the LED connected will not light up, indicating there is no known face detected.
+
+### Most important function: we load the known faces obtained in the training faze and now we test the given frame’s encodings against the known faces encodings. I there is a match, then we output a high signal using GPIO library on the specified led pin, else, we output a low signal, meaning that the LED connected will not light up, indicating there is no known face detected.
+
 At the end, we save the image with the face having a bounding box around it, coloured in either green, if the face is known, or red, if the face is unknown.
 ![Test Function](https://github.com/seraphh01/Face_Recognition_Pi/blob/master/test_function.png)
